@@ -1,0 +1,7 @@
+Volatile means that the qualified object may be modified in ways unknown to the implementation, or that access to it may have other unknown side effects.
+Expressions involving volatile objects cannot be optimized by the compiler.
+
+Exmaples of objects correctly described as volatile
+  device registers, semaphores and data shared with asynchronous signal handlers
+
+

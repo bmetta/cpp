@@ -1,0 +1,19 @@
+Compilation process is conversion of C source file to object file.
+This process takes in four stages
+
+Pre-processing
+  Includes the include files
+  Removes the comments
+  Expands the macros, inline functions
+  Conditional compilation
+
+Compilation
+  Generates a pseudo assembly language code which does not correspond to any microprocessor
+
+Optimization
+  Optimize the code based on the registers of the microprocessor
+  Generates assembly language instructions for a particular microprocessor
+
+Assembling
+  Converts the assembly instructions to machine op-codes
+
