@@ -13,11 +13,6 @@ using namespace std;
  *
  * rvalue => An expression is rvalue if its results in a temporary object. it refers to a temporary object
  * eg 1:
- *  int x;
- *  int getVal() { return x; }
- *  getVal();
- *
- * eg 2:
  *  string getName() { return "Alex"; }
  *  string name = getName();
  *
@@ -39,7 +34,7 @@ using namespace std;
  * C++0x use lvalue reference to bind temporary object
  * const int& val = getValue();
  * getValue() is an rvalue
- * 
+ *
  * int& value => takes only lvalue
  * const int& value => takes lvalue or rvalue
  * int&& value => takes only rvalue reference
@@ -54,7 +49,7 @@ int main() {
   //string& name2 = getName(); // Error in C++03 and C++11
   const string& name1 = getName(); // ok in C++03 and C++11
   string&& name4 = getName(); // new feature in C++11
-  
+
   // C++11
   string str = "Hello";
   //string&& name5 = str; // cannot bind lvalue to rvalue

@@ -17,6 +17,6 @@ int main()
 
   const int &ref_c = 10; // unnamed reference
   cout << ref_c << endl;
-  
+
   return 0;
 }

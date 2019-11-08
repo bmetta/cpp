@@ -10,7 +10,7 @@ public:
 
 int main()
 {
-  auto_ptr<T> pt1( new T );
+  auto_ptr<T> pt1(new T);
   auto_ptr<T> pt2;
 
   pt2 = pt1;  // now pt2 owns the pointer, and
