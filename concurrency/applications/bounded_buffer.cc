@@ -1,5 +1,4 @@
 // Compilation: g++ -std=c++11 bounded_buffer.cc -pthread -lpthread
-//
 #include <thread>
 #include <mutex>
 #include <chrono>
@@ -36,8 +35,8 @@ struct BoundedBuffer {
         rear = (rear + 1) % capacity;
         ++count;
 
-        l.unlock();
         not_empty.notify_one();
+        l.unlock();
     }
 
     int fetch(){
@@ -49,8 +48,8 @@ struct BoundedBuffer {
         front = (front + 1) % capacity;
         --count;
 
-        l.unlock();
         not_full.notify_one();
+        l.unlock();
 
         return result;
     }
